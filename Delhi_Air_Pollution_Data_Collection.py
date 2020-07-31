@@ -46,7 +46,8 @@ url_list = ['http://www.dpccairdata.com/dpccairdata/display/AallStationView5MinD
 
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 # creds = ServiceAccountCredentials.from_json_keyfile_name("cred.json", scope)
-creds = ServiceAccountCredentials.from_json(json.loads(json.dumps(sys.argv[1])))
+print(str(sys.argv[1]))
+creds = ServiceAccountCredentials.from_json(json.loads(json.dumps(str(sys.argv[1]))))
 client = gspread.authorize(creds)
 gas_sheet = client.open('Delhi_air_pollution').worksheet('gas_value')
 meter_sheet = client.open('Delhi_air_pollution').worksheet('meter_value')
