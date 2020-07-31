@@ -23,6 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install wheel
+        pip install bootstrapped --no-deps
         pip install -r requirements.txt
         
     - name: Run Script
