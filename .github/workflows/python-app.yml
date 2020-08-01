@@ -5,7 +5,7 @@ name: DelhiPollution
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "2 */6 * * *"
     
 jobs:
   build:
